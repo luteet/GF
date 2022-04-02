@@ -1741,7 +1741,7 @@ body._popup-active {
   margin: 0 auto;
   font-size: 1.125rem;
   line-height: 150%;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -1801,6 +1801,7 @@ body._popup-active {
 }
 
 .goals__item--title {
+  font-weight: 600;
   font-size: 1rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
