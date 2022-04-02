@@ -1720,7 +1720,7 @@ body._popup-active {
   text-align: center;
   color: var(--dark-blue);
   font-weight: 600;
-  font-size: 1.5625rem;
+  font-size: 1.25rem;
   text-transform: uppercase;
 }
 
@@ -1984,6 +1984,10 @@ body._popup-active {
     padding: 40px;
     width: 188px;
     height: 188px;
+  }
+
+  .services__card--title {
+    font-size: 1.5625rem;
   }
 
   .services__card--li {
