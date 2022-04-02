@@ -1729,9 +1729,9 @@ body._popup-active {
 }
 
 .services__card--li {
-  font-size: 1rem;
+  font-size: 0.875rem;
+  padding: 7px 0;
   font-weight: 400;
-  padding: 10px 0;
   line-height: 130%;
 }
 
@@ -1859,6 +1859,13 @@ body._popup-active {
 .goals__submit {
   max-width: 546px;
   width: 100%;
+}
+
+@media (min-width: 426px) {
+  .services__card--li {
+    padding: 10px 0;
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 500px) {
