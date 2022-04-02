@@ -1739,18 +1739,18 @@ body._popup-active {
   text-align: center;
   max-width: 890px;
   margin: 0 auto;
-  font-size: 1.375rem;
+  font-size: 1.125rem;
   line-height: 150%;
   font-weight: 400;
   text-transform: uppercase;
 }
 
 .goals__list {
-  padding-top: 93px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100%;
   grid-template-columns: 100%;
+  padding-top: 53px;
   gap: 41px;
 }
 
@@ -1835,11 +1835,11 @@ body._popup-active {
 }
 
 .goals__step {
-  padding-top: 62px;
+  padding-top: 32px;
+  font-size: 1.25rem;
   text-align: center;
   text-transform: uppercase;
   color: var(--dark-gray);
-  font-size: 1.5rem;
 }
 
 .goals__footer {
@@ -1983,9 +1983,19 @@ body._popup-active {
     font-size: 1.25rem;
   }
 
+  .goals__title {
+    font-size: 1.375rem;
+  }
+
   .goals__list {
+    padding-top: 93px;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .goals__step {
+    font-size: 1.5rem;
+    padding-top: 62px;
   }
 }
 
