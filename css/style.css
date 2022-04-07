@@ -1371,7 +1371,7 @@ body._popup-active {
 }
 
 ._container._large {
-  max-width: 1470px;
+  max-width: 1366px;
 }
 
 ._section-padding {
@@ -1599,6 +1599,10 @@ body._popup-active {
   margin: 0 -20px;
 }
 
+.services__slider--list {
+  margin-top: 50px;
+}
+
 .services__slider--card {
   opacity: 0;
   visibility: hidden;
@@ -1612,7 +1616,7 @@ body._popup-active {
 }
 
 .services__slider--arrow {
-  top: calc(100% - 125px);
+  top: 50px;
   width: 65px;
   height: 65px;
   border-radius: 50%;
@@ -1650,7 +1654,7 @@ body._popup-active {
 }
 
 .services__slider--footer {
-  margin-top: 125px;
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1848,16 +1852,15 @@ body._popup-active {
 }
 
 .goals__item--image {
-  text-align: right;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .goals__item--img {
@@ -1867,7 +1870,8 @@ body._popup-active {
   -o-object-position: left center;
      object-position: left center;
   height: 100%;
-  max-width: 60%;
+  width: 100%;
+  max-width: 80%;
 }
 
 .goals__step {
@@ -1918,6 +1922,14 @@ body._popup-active {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: 1/1;
+    text-align: right;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .goals__item--img {
+    max-width: 60%;
   }
 }
 
@@ -1997,7 +2009,7 @@ body._popup-active {
   }
 
   .services__slider--arrow {
-    top: calc(100% - 150px);
+    top: 50px;
   }
 }
 
@@ -2070,10 +2082,16 @@ body._popup-active {
   }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1450px) {
   .services__slider {
     padding: 100px 143px 0 143px;
     margin: 0;
+  }
+
+  .services__slider--arrow {
+    top: 50%;
+    width: 93px;
+    height: 93px;
   }
 
   .services__slider--arrow.swiper-button-next {
@@ -2083,13 +2101,9 @@ body._popup-active {
   .services__slider--arrow.swiper-button-prev {
     left: 0;
   }
+}
 
-  .services__slider--arrow {
-    top: 50%;
-    width: 93px;
-    height: 93px;
-  }
-
+@media (min-width: 1700px) {
   .services__slider--arrow::after {
     font-size: 40px;
   }
