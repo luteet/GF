@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="SHORTCUT ICON" href="img/logo.svg" type="image/svg"> -->
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+
+
+<div class="wrapper">
+    <section class="cost _section-padding _min">
+        <div class="cost__container _container _min">
+            <form action="#" class="cost__form">
+                <div class="cost__form--body">
+                    <label class="cost__form--label">
+                        <input type="text" name="name-company" required placeholder="Название компании*" class="cost__form--input _input">
+                    </label>
+                    <label class="cost__form--label">
+                        <input type="text" name="field-activity" placeholder="Сфера деятельности" class="cost__form--input _input">
+                    </label>
+                    <label class="cost__form--label">
+                        <input type="text" name="name" required placeholder="ФИО*" class="cost__form--input _input">
+                    </label>
+                    <label class="cost__form--label">
+                        <input type="text" name="position" placeholder="Должность" class="cost__form--input _input">
+                    </label>
+                    <!-- <label class="cost__form--label">
+                        <input type="text" name="tel" required placeholder="Телефон*" class="cost__form--input _input">
+                    </label> -->
+                    <label class="cost__form--label _min">
+                        <input type="text" name="e-mail" required placeholder="E-mail*" class="cost__form--input _input">
+                    </label>
+                    <label class="cost__form--label _min">
+                        <input type="text" name="phone" required placeholder="Телефон*" class="cost__form--input _input">
+                    </label>
+                    <label class="cost__form--label">
+                        <textarea name="comment" placeholder="Комментарий..." rows="9" class="cost__form--textarea _textarea"></textarea>
+                    </label>
+                    <div class="cost__form--checkbox _checkbox">
+                        <input type="checkbox" name="cost-news" id="cost-news" class="cost__form--checkbox-input _checkbox-input">
+                        <label for="cost-news" class="cost__form--checkbox-label _checkbox-label">
+                            Я согласен получать новости
+                        </label>
+                    </div>
+                    <div class="cost__form--checkbox _checkbox">
+                        <input type="checkbox" required name="cost-personal-data" id="cost-personal-data" class="cost__form--checkbox-input _checkbox-input">
+                        <label for="cost-personal-data" class="cost__form--checkbox-label _checkbox-label _td-underline">
+                            Я согласен на обработку моих персональных данных*
+                        </label>
+                    </div>
+                    <button class="cost__form--submit _btn">
+                        УЗНАТЬ СТОИМОСТЬ
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+</html>

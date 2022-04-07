@@ -38,10 +38,10 @@ let servicesSlider = new Swiper('.services__slider', {
         prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-      1300: {
+      1200: {
         slidesPerView: 3,
       },
-      700: {
+      768: {
         slidesPerView: 2,
         
       },
