@@ -1785,6 +1785,7 @@ body._popup-active {
 
 .goals__item {
   position: relative;
+  min-height: 275px;
 }
 
 .goals__item--input {
