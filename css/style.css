@@ -1390,6 +1390,7 @@ body._popup-active {
   text-align: center;
   padding: 18px 15px;
   font-size: 0.875rem;
+  font-weight: 600;
   line-height: 125%;
   text-transform: uppercase;
   background: var(--accent-gradient);
