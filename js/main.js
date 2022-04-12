@@ -209,16 +209,25 @@ body.addEventListener('click', function (event) {
           goalsSectionStart = document.querySelector('._goals-section-start'),
           goalsSectionResult = document.querySelector('._goals-section-result');
 
+      let goalsInputChecked = true;
       goalsInputList.forEach(goalsInput => {
 
         if(goalsInput.checked) {
           let goalSlide = document.querySelector(`#${goalsInput.dataset.idSlide}`);
           if(goalSlide) goalSlide.classList.add('_visible');
+          goalsInputChecked = false;
+        } else {
+          goalsInputChecked = true;
         }
 
       })
 
-      
+      if(goalsInputChecked) {
+        document.querySelectorAll(`._goals-slide`).forEach(thisElelement => {
+          thisElelement.classList.add('_visible');
+        })
+      }
+
 
       goalsSectionStart.style.opacity = 0;
       goalsSectionStart.style.visibility = 'hidden';
@@ -273,6 +282,7 @@ new Swiper('.services__slider', {
   breakpoints: {
     1200: {
       slidesPerView: 3,
+      centeredSlides: false,
     },
     768: {
       spaceBetween: 60,
