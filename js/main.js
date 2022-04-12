@@ -218,26 +218,7 @@ body.addEventListener('click', function (event) {
 
       })
 
-      new Swiper('.services__slider', {
-  
-        spaceBetween: 60,
-        slidesPerView: 1,
-        centeredSlides: false,
-        
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-          1200: {
-            slidesPerView: 3,
-          },
-          768: {
-            slidesPerView: 2,
-            
-          },
-        }
-      });
+      
 
       goalsSectionStart.style.opacity = 0;
       goalsSectionStart.style.visibility = 'hidden';
@@ -279,8 +260,25 @@ body.addEventListener('click', function (event) {
 })
 
 
-
-
-
-
+new Swiper('.services__slider', {
+  
+  spaceBetween: 15,
+  slidesPerView: 1,
+  centeredSlides: true,
+  
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    1200: {
+      slidesPerView: 3,
+    },
+    768: {
+      spaceBetween: 60,
+      slidesPerView: 2,
+      centeredSlides: false,
+    },
+  }
+});
 
