@@ -1765,6 +1765,7 @@ body._popup-active {
 .services__card {
   height: auto;
   display: none;
+  position: relative;
 }
 
 .services__card._visible {
@@ -1774,6 +1775,21 @@ body._popup-active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.services__card--input {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.services__card--input:checked + .services__card--body .services__card--check {
+  opacity: 1;
+  visibility: visible;
 }
 
 .services__card--body {
@@ -1830,6 +1846,10 @@ body._popup-active {
   border-radius: 50%;
   background-color: var(--green);
   color: var(--white);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
 .services__card--icon {
