@@ -202,60 +202,6 @@ body.addEventListener('click', function (event) {
     }
 
 
-    let goalsSubmit = thisTarget.closest('._goals-submit')
-    if (goalsSubmit) {
-      event.preventDefault();
-      let goalsInputList = document.querySelectorAll('._goals-input'),
-          goalsSectionStart = document.querySelector('._goals-section-start'),
-          goalsSectionResult = document.querySelector('._goals-section-result');
-
-          
-
-      let goalsInputChecked = true;
-      goalsInputList.forEach(goalsInput => {
-        if(goalsInput.checked) {
-            
-          let goalSlide = document.querySelector(`#${goalsInput.dataset.idSlide}`);
-          if(goalSlide) goalSlide.classList.add('_visible');
-          goalsInputChecked = false;
-        } else {
-          goalsInputChecked = true;
-        }
-
-      })
-
-      /* if(goalsInputChecked) {
-        document.querySelectorAll(`._goals-slide`).forEach(thisElelement => {
-          thisElelement.classList.add('_visible');
-        })
-      } */
-
-
-      goalsSectionStart.style.opacity = 0;
-      goalsSectionStart.style.visibility = 'hidden';
-
-      setTimeout(() => {
-        goalsSectionStart.style.display = 'none';
-      },300)
-
-      setTimeout(() => {
-        goalsSectionResult.style.display = 'block';
-        window.scroll({
-          left: 0,
-          top: 0,
-        })
-      },600)
-
-      setTimeout(() => {
-        goalsSectionResult.style.opacity = 1;
-        goalsSectionResult.style.visibility = 'visible';
-
-      },700)
-
-    }
-
-
-
     let btnPopup = thisTarget.closest('._open-popup');
     if(btnPopup) {
       event.preventDefault();
