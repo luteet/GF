@@ -2098,6 +2098,7 @@ body._popup-active {
 }
 
 .result__body {
+  padding: 50px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
