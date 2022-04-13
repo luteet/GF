@@ -1744,7 +1744,7 @@ body._popup-active {
 
 .services__slider--arrow::after {
   color: var(--white);
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .services__slider--footer {
@@ -1880,6 +1880,11 @@ body._popup-active {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: var(--accent-2);
+}
+
+.services__card--icon-element {
+  color: var(--white);
+  font-size: 60px;
 }
 
 .services__card--img {
@@ -2193,7 +2198,6 @@ body._popup-active {
   }
 
   .cost__form--body {
-    font-size: 1rem;
     gap: 20px;
   }
 
@@ -2203,7 +2207,7 @@ body._popup-active {
   }
 
   .cost__form--submit {
-    margin-top: 60px;
+    margin-top: 40px;
   }
 
   .services__slider {
