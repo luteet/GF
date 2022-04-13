@@ -209,10 +209,12 @@ body.addEventListener('click', function (event) {
           goalsSectionStart = document.querySelector('._goals-section-start'),
           goalsSectionResult = document.querySelector('._goals-section-result');
 
+          
+
       let goalsInputChecked = true;
       goalsInputList.forEach(goalsInput => {
-
         if(goalsInput.checked) {
+            
           let goalSlide = document.querySelector(`#${goalsInput.dataset.idSlide}`);
           if(goalSlide) goalSlide.classList.add('_visible');
           goalsInputChecked = false;
@@ -222,11 +224,11 @@ body.addEventListener('click', function (event) {
 
       })
 
-      if(goalsInputChecked) {
+      /* if(goalsInputChecked) {
         document.querySelectorAll(`._goals-slide`).forEach(thisElelement => {
           thisElelement.classList.add('_visible');
         })
-      }
+      } */
 
 
       goalsSectionStart.style.opacity = 0;
