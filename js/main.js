@@ -189,18 +189,46 @@ if (popupCheck) {
 
 
 
+// =-=-=-=-=-=-=-=-=-=-=-=- <Скрытие кнопки если не выбрано ничего> -=-=-=-=-=-=-=-=-=-=-=-=
+
+function goalsCheck() {
+    let goalsInput = document.querySelectorAll('._goals-input'),
+        submitBtn  = document.querySelector('._goals-submit'),
+        checkedElem;
+
+    if(goalsInput[0] && submitBtn) {
+
+        submitBtn.classList.add('_hidden');
+        submitBtn.classList.remove('_visible');
+
+        goalsInput.forEach(thisElement => {
+            if(thisElement.checked) {
+                checkedElem = true;
+                return false;
+            }
+        })
+
+        if(checkedElem) {
+            submitBtn.classList.remove('_hidden');
+            submitBtn.classList.add('_visible');
+        }
+
+    }
+
+    
+    
+}
+
+goalsCheck();
+
+// =-=-=-=-=-=-=-=-=-=-=-=- </Скрытие кнопки если не выбрано ничего> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
 let thisTarget;
 body.addEventListener('click', function (event) {
 
     thisTarget = event.target;
-
-    // Меню в шапке
-    if (thisTarget.closest('._burger')) {
-        menu.forEach(elem => {
-            elem.classList.toggle('_active')
-        })
-    }
-
 
     let btnPopup = thisTarget.closest('._open-popup');
     if(btnPopup) {
@@ -213,6 +241,17 @@ body.addEventListener('click', function (event) {
       });
 
     }
+
+
+    let goalsLabel = thisTarget.closest('._goals-label');
+    if(goalsLabel) {
+        event.preventDefault();
+
+        goalsLabel.previousElementSibling.checked = !goalsLabel.previousElementSibling.checked;
+
+        goalsCheck();
+  
+      }
 
 })
 
@@ -239,4 +278,6 @@ new Swiper('.services__slider', {
     },
   }
 });
+
+
 
